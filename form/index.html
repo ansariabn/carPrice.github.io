@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Car Price</title>
+        <link rel="shortcut icon" href="car.png" type="image/x-icon">
+        <style>
+        
+        * {
+            padding: 0;
+            margin: 0;
+            font-family:sans-serif
+        }
+        form {
+            background-color: rgb(189, 107, 48);
+            padding: 10px;
+            color: white;
+            
+        }
+        .container .box {
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr 1fr;
+            
+            margin: 20px;
+
+            
+        }
+        .container .box select {
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+        }
+       .contai .box{
+        display: grid;
+        margin: 20px;
+        
+       }
+       .contai .box #slider {
+            
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr 1fr;
+       }
+
+       .header {
+            text-align: center;
+            padding: 20px;
+            background:rgb(230, 102, 10);
+            color: whitesmoke;
+       }
+       .input {
+            text-align: center;
+            
+            margin: 10px;
+       }
+       .input input {
+            padding: 10px;
+            margin: 10px;
+          
+            outline: none;
+            
+       }
+        
+    </style>
+    </head>
+    <body>
+        <h1 class="header">Cars Information</h1>
+            <form action="">
+                
+            <div class="container">
+                <div class="box">
+
+                    <label>Fuel Type</label>
+                    <select>
+                        <option value="--">Select The Items</option>
+                        <option value="gas">Gas</option>
+                        <option value="Diesel">Diesel</option>
+                    </select>
+                </div>
+                <div class="box">
+                    <label>Aspration</label>
+                    <select>
+                        <option value="--">Select The Items</option>
+                        <option value="Standard">Standard</option>
+                        <option value="turbo">Turbo</option>
+                    </select>
+                </div>
+
+
+                <div class="box">
+                    <label>Carbody</label>
+                    <select>
+                        <option value="--">Select The Items</option>
+                        <option value="Carbody">Carbody</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Wagon">Wagon</option>
+                        <option value="Hardtop">Hardtop</option>
+                        <option value="Convertible">Convertible</option>
+                    </select>
+                </div>
+
+
+                <div class="box">
+                    <label>DriveWheel</label>
+                    <select>
+                        <option value="--">Select The Items</option>
+                        <option value="fwd">FWD</option>
+                        <option value="rwd">RWD</option>
+                        <option value="4wd">4WD</option>
+
+                    </select>
+                </div>
+
+
+                <div class="box">
+                    <label>Engine type</label>
+                    <select>
+                        <option value="--">Select The Items</option>
+                        <option value="ohc">OHC</option>
+                        <option value="ohcf">OHCF</option>
+                        <option value="ohcv">OHCV</option>
+                        <option value="dohc">DOHC</option>
+                        <option value="rotor">ROTOR</option>
+                        <option value="dohcv">DOHCV</option>
+                    </select>
+                </div>
+
+
+                <div class="box">
+                    <label>Fuel System</label>
+                    <select>
+                        <option value="--">Select The Items</option>
+                        <option value="mpfi">MPFI</option>
+                        <option value="2bbl">2BBL</option>
+                        <option value="idi">IDI</option>
+                        <option value="1bbl">1BBL</option>
+                        <option value="spdi">SPDI</option>
+                        <option value="4bbl">4BBL</option>
+                        <option value="mfi">MFI</option>
+                        <option value="spfi">SPFI</option>
+                    </select>
+                </div>
+
+
+                <div class="box">
+                    <label>Cylinder Number</label>
+                    <select>
+                        <option value="--">Select The Items</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                        <option value="8">8</option>
+                        <option value="12">12</option>
+
+                    </select>
+                </div>
+            </div>
+<!-- Range Slider -->
+            <div class="contai">
+
+                <div  class="box">
+                    <div id="slider">
+                        <label for="">DriveWheel</label>
+                        <input class="bar" type="range" id="rangeinput" min="80" max="125" value="1" 
+                        step="5"
+                        onchange="rangevalue.value=value"/>
+                        <span class="highlight"></span>
+                        <output id="rangevalue">80</output>
+                    </div>
+                </div>
+               
+                <div  class="box">
+                    <div id="slider">
+                        <label for="">Car lenght</label>
+                        <input class="bar" type="range" id="rangeinput2" min="140" max="210" value="1" 
+                        step="10"
+                        onchange="rangevalue2.value=value"/>
+                        <span class="highlight"></span>
+                        <output id="rangevalue2">140</output>
+                    </div>
+                </div>
+                <div  class="box">
+                    <div id="slider">
+                        <label for="">Card Width</label>
+                        <input class="bar" type="range" id="rangeinput" min="60" max="75" value="1" 
+                        step="5"
+                        onchange="rangevalue3.value=value"/>
+                        <span class="highlight"></span>
+                        <output id="rangevalue3">60</output>
+                    </div>
+                </div>
+                <div  class="box">
+                    <div id="slider">
+                        <label for="">Curb wight</label>
+                        <input class="bar" type="range" id="rangeinput" min="1000" max="6000" value="1" 
+                        step="1000"
+                        onchange="rangevalue4.value=value"/>
+                        <span class="highlight"></span>
+                        <output id="rangevalue4">10000</output>
+                    </div>
+                </div>
+
+                <div  class="box">
+                    <div id="slider">
+                        <label for="">Engine Size</label>
+                        <input class="bar" type="range" id="rangeinput" min="40" max="400" value="1" 
+                        step="5"
+                        onchange="rangevalue5.value=value"/>
+                        <span class="highlight"></span>
+                        <output id="rangevalue5">40</output>
+                    </div>
+                </div>
+                  
+                <div  class="box">
+                    <div id="slider">
+                        <label for="">Bore ratio</label>
+                        <input class="bar" type="range" id="rangeinput" min="2" max="5" value="1" 
+                        step="1"
+                        onchange="rangevalue6.value=value"/>
+                        <span class="highlight"></span>
+                        <output id="rangevalue6">2</output>
+                    </div>
+                </div>
+                
+                <div  class="box">
+                    <div id="slider">
+                        <label for="">Horse Power</label>
+                        <input class="bar" type="range" id="rangeinput" min="40" max="500" value="1" 
+                        step="10"
+                        onchange="rangevalue8.value=value"/>
+                        <span class="highlight"></span>
+                        <output id="rangevalue8">40</output>
+                    </div>
+                </div>
+                <div  class="box">
+                    <div id="slider">
+                        <label for="">City Mpg</label>
+                        <input class="bar" type="range" id="rangeinput" min="10" max="60" value="1" 
+                        step="5"
+                        onchange="rangevalue9.value=value"/>
+                        <span class="highlight"></span>
+                        <output id="rangevalue9">10</output>
+                    </div>
+                </div>
+
+                <div  class="box">
+                    <div id="slider">
+                        <label for="">HighWay Mpg</label>
+                        <input class="bar" type="range" id="rangeinput" min="10" max="60" value="1" 
+                        step="5"
+                        onchange="rangevalue11.value=value"/>
+                        <span class="highlight"></span>
+                        <output id="rangevalue11">10</output>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="input">
+                <input type="submit" value="Submit">
+                <input type="reset">
+            </div>
+              
+
+        </form>
+           
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
